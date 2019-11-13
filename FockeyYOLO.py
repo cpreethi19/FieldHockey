@@ -59,7 +59,6 @@ while(cap.isOpened()):
     for i in range(len(boxes)):
         if i in indexes:
             x, y, w, h = boxes[i]
-            #color = colors[i]
             label = classes[class_ids[i]]
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
             cv2.putText(frame, label, (x, y - 10), cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0))
